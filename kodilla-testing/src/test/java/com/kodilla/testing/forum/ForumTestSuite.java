@@ -7,7 +7,15 @@ import org.junit.jupiter.api.Test;
 public class ForumTestSuite {
     @Test
     void TestCaseUserName() {
-        //given
-        SimpleUser simpleUser = new SimpleUser()
+        //Given
+        SimpleUser simpleUser = new SimpleUser("theForumUser");
+
+        //When
+        String result = simpleUser.getUsername();
+
+        String expectedResult = "theForumUser";
+
+        //Then
+        Assertions.assertEquals(expectedResult, result);
     }
 }
